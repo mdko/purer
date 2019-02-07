@@ -140,6 +140,8 @@ prompt_pure_preprompt_render() {
 
 	local symbol_color="%(?.${PURE_PROMPT_SYMBOL_COLOR:-magenta}.red)"
 
+    # add iterm2 mark at each prompt
+    preprompt+="%{$(iterm2_prompt_mark)%}"
 	# show virtual env
 	preprompt+="%(12V.%F{242}%12v%f .)"
 	# begin with symbol, colored by previous command exit code
